@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Jombotron from './Jombotron'
 
 class Home extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>This is the home componenet</div>
+      <Jombotron></Jombotron>
     );
   }
 }
