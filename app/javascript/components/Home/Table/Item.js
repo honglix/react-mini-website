@@ -37,7 +37,7 @@ class Item extends Component {
                                         <h4>{this.props.title}</h4>
                                         <p>{this.props.description}</p>
                                         <div className="cta-wrapper">
-                                            <Button href="#" className="btn cta-btn">Watch this video</Button>
+                                            <Button onClick={this.props.handleVideoChange} className="btn cta-btn">Watch this video</Button>
                                         </div>
                                     </div>
                                 </div>

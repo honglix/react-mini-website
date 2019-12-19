@@ -13,11 +13,29 @@ class Home extends Component {
       { id: 4, title: "4. Add react router", description: "lorem ipsum", active: false }
     ] };
   }
+
+  handleVideoChange = (item, event)=>{
+    event.preventDefault();
+    
+    let course_modules = [...this.state.course_modules];
+    course_modules.map((data)=>{
+      data.active = false;
+    })
+
+    item.active = !item.active
+
+    course_modules[item.id - 1] = item;
+
+    this.setState({
+      course_modules: course_modules
+    })
+  }
+
   render() {
     return (
       <div>
         <Jombotron></Jombotron>
-        <Table course_modules={this.state.course_modules}></Table>
+        <Table course_modules={this.state.course_modules} handleVideoChange={this.handleVideoChange.bind(this)}></Table>
       </div>
     );
   }
