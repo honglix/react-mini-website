@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Jombotron from './Jombotron'
+import Table from './Table/Table';
 
 class Home extends Component {
   constructor(props) {
@@ -14,7 +15,10 @@ class Home extends Component {
   }
   render() {
     return (
-      <Jombotron></Jombotron>
+      <div>
+        <Jombotron></Jombotron>
+        <Table course_modules={this.state.course_modules}></Table>
+      </div>
     );
   }
 }

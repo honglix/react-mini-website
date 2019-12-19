@@ -20,6 +20,22 @@ const Subheader = styled.p`
     font-weight: 500;
 `
 
+const Button = styled.a`
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #333 !important;
+    box-shadow: 0px 0px 0px 3px #473228,
+        -6px 6px #ef5f17,
+        -6px 6px 0px 3px #473228;
+
+`
+
 class Jombotron extends Component {
     constructor(props) {
         super(props);
@@ -34,6 +50,10 @@ class Jombotron extends Component {
                             <div className="pt-4 mt-4">
                                 <Header>React for Rails Develpers</Header>
                                 <Subheader>Superchage your Ruby on Rails with React.js</Subheader>
+                                <div className="cta-wrapper">
+                                    <Button href="#" className="btn fancy-btn">Get Started</Button>
+                                </div>
+
                             </div>
                         </div>
                         <div className="col col-sm-12 col-md-7">
